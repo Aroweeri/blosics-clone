@@ -18,4 +18,4 @@ func _ready():
 func _input(event):
 	if(event.is_action_pressed("ui_accept")):
 		#$Ball.sleeping = false;
-		$Ball.apply_central_impulse(Vector2(10000,0));
+		$Ball.apply_central_impulse(Vector2(4000,0));
