@@ -20,14 +20,17 @@ func _unhandled_input(event):
 				newBall.growing = false;
 				var shootVector : Vector2 = clickPos - releasePos;
 				shootVector = shootVector.clamped(300);
-				print(shootVector.length())
 				shootVector *= newBall.mass * 10;
 				
 				newBall.apply_central_impulse(shootVector);
 				clickPos = null;
 
 
-func _on_Area2D_input_event(viewport, event, shape_idx):
+func _on_DespawnArea_body_exited(body):
+	body.queue_free();
+
+
+func _on_BallSpawnArea_input_event(viewport, event, shape_idx):
 	if(not event is InputEventMouseButton):
 		return;
 		
@@ -36,7 +39,3 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		newBall = ball.instance();
 		newBall.position = event.position;
 		add_child(newBall);
-
-
-func _on_DespawnArea_body_exited(body):
-	body.queue_free();
