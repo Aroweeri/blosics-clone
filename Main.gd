@@ -35,3 +35,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		newBall = ball.instance();
 		newBall.position = event.position;
 		add_child(newBall);
+
+
+func _on_DespawnArea_body_exited(body):
+	body.queue_free();
