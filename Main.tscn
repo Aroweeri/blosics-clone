@@ -13,64 +13,22 @@ script = ExtResource( 4 )
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 370, 480 )
-scaleX = 3.0
+scaleX = 20.0
 
 [node name="Wall" type="Node2D" parent="."]
 position = Vector2( 352, 480 )
 
 [node name="Cube" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 18, -10 )
-
-[node name="Cube2" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 18, -20 )
-
-[node name="Cube3" parent="Wall" instance=ExtResource( 2 )]
 position = Vector2( 18, -30 )
-
-[node name="Cube4" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 28, -30 )
-
-[node name="Cube5" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 28, -20 )
-
-[node name="Cube6" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 28, -10 )
-
-[node name="Cube7" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 8, -10 )
-
-[node name="Cube8" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 8, -20 )
-
-[node name="Cube9" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 8, -30 )
-
-[node name="Cube10" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 8, -40 )
-
-[node name="Cube11" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 18, -40 )
-
-[node name="Cube12" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 28, -40 )
-
-[node name="Cube13" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 28, -50 )
-
-[node name="Cube14" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 18, -50 )
-
-[node name="Cube15" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 8, -50 )
+scaleX = 15.0
+scaleY = 10.0
 
 [node name="Cube16" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 8, -60 )
-
-[node name="Cube17" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 28, -60 )
+position = Vector2( 18, -120 )
+scaleX = 10.0
 
 [node name="BallSpawnArea" parent="." instance=ExtResource( 3 )]
-position = Vector2( 710, 440 )
+position = Vector2( 540, 440 )
 
 [node name="DespawnArea" type="Area2D" parent="."]
 position = Vector2( 384, 512 )
