@@ -9,4 +9,3 @@ func _process(delta):
 		$CollisionShape2D.scale.x += growthSpeed * delta;
 		$CollisionShape2D.scale.y += growthSpeed * delta;
 		mass = 1 * $CollisionShape2D.scale.x * $CollisionShape2D.scale.x;
-		print(mass);

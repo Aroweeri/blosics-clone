@@ -18,9 +18,12 @@ func _unhandled_input(event):
 			releasePos = event.position;
 			if(clickPos):
 				newBall.growing = false;
-				var shootDirection = clickPos - releasePos;
-				shootDirection *= newBall.mass * 10;
-				newBall.apply_central_impulse(shootDirection);
+				var shootVector : Vector2 = clickPos - releasePos;
+				shootVector = shootVector.clamped(300);
+				print(shootVector.length())
+				shootVector *= newBall.mass * 10;
+				
+				newBall.apply_central_impulse(shootVector);
 				clickPos = null;
 
 
