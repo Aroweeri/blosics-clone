@@ -20,7 +20,7 @@ func _unhandled_input(event):
 				newBall.growing = false;
 				var shootVector : Vector2 = clickPos - releasePos;
 				shootVector = shootVector.clamped(300);
-				shootVector *= newBall.mass * 10;
+				shootVector *= newBall.mass * 20;
 				
 				newBall.apply_central_impulse(shootVector);
 				clickPos = null;

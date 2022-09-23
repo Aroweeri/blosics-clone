@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cube.tscn" type="PackedScene" id=2]
 [ext_resource path="res://BallSpawnArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=4]
+[ext_resource path="res://background.jpg" type="Texture" id=5]
+[ext_resource path="res://Sprite.gd" type="Script" id=6]
+[ext_resource path="res://DespawnArea.gd" type="Script" id=7]
 
 [sub_resource type="CircleShape2D" id=6]
 radius = 712.0
@@ -12,29 +15,308 @@ radius = 712.0
 script = ExtResource( 4 )
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
-position = Vector2( 370, 480 )
+position = Vector2( 370, 490 )
 scaleX = 20.0
+scaleY = 2.0
 
 [node name="Wall" type="Node2D" parent="."]
 position = Vector2( 352, 480 )
 
-[node name="Cube" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 18, -30 )
-scaleX = 15.0
-scaleY = 10.0
-
 [node name="Cube16" parent="Wall" instance=ExtResource( 2 )]
-position = Vector2( 18, -120 )
-scaleX = 10.0
+position = Vector2( 18, -10 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube17" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -2, -10 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube18" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -22, -10 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube19" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -42, -10 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube20" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -62, -10 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube23" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 68, -30 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube24" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 48, -30 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube25" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 28, -30 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube26" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 8, -30 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube27" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -12, -30 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube28" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -32, -30 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube29" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -52, -30 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube21" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 38, -10 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube22" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 58, -10 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube32" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 73, -10 )
+scaleY = 2.0
+
+[node name="Cube33" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -67, -30 )
+scaleY = 2.0
+
+[node name="Cube30" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 18, -50 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube31" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -2, -50 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube34" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -22, -50 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube35" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -42, -50 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube36" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -62, -50 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube37" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 68, -70 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube38" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 48, -70 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube39" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 28, -70 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube40" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 8, -70 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube41" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -12, -70 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube42" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -32, -70 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube43" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -52, -70 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube44" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 38, -50 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube45" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 58, -50 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube46" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 73, -50 )
+scaleY = 2.0
+
+[node name="Cube47" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -67, -70 )
+scaleY = 2.0
+
+[node name="Cube48" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 18, -90 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube49" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -2, -90 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube50" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -22, -90 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube51" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -42, -90 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube52" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -62, -90 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube53" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 68, -110 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube54" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 48, -110 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube55" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 28, -110 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube56" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 8, -110 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube57" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -12, -110 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube58" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -32, -110 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube59" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -52, -110 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube60" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 38, -90 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube61" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 58, -90 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube62" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 73, -90 )
+scaleY = 2.0
+
+[node name="Cube64" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 18, -130 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube65" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -2, -130 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube66" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -22, -130 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube67" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -42, -130 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube68" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -62, -130 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube69" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 38, -130 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube70" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 58, -130 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Cube71" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( 73, -130 )
+scaleY = 2.0
+
+[node name="Cube63" parent="Wall" instance=ExtResource( 2 )]
+position = Vector2( -67, -110 )
+scaleY = 2.0
 
 [node name="BallSpawnArea" parent="." instance=ExtResource( 3 )]
-position = Vector2( 540, 440 )
+position = Vector2( 645, 390 )
+scaleX = 0.5
+scaleY = 0.5
 
 [node name="DespawnArea" type="Area2D" parent="."]
+visible = false
 position = Vector2( 384, 512 )
+script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DespawnArea"]
 shape = SubResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 510, 300 )
+scale = Vector2( 0.541667, 0.574074 )
+z_index = -2
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [connection signal="input_event" from="BallSpawnArea" to="." method="_on_BallSpawnArea_input_event"]
 [connection signal="body_exited" from="DespawnArea" to="." method="_on_DespawnArea_body_exited"]
