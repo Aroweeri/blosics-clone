@@ -310,6 +310,39 @@ shape = SubResource( 6 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+margin_top = 540.0
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_top = 20.0
+margin_right = 48.0
+margin_bottom = 40.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+disabled = true
+text = "Menu"
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_left = 483.0
+margin_top = 20.0
+margin_right = 540.0
+margin_bottom = 40.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Restart"
+
+[node name="NextButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_left = 982.0
+margin_top = 20.0
+margin_right = 1024.0
+margin_bottom = 40.0
+size_flags_horizontal = 10
+size_flags_vertical = 4
+disabled = true
+text = "Next"
+
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
 position = Vector2( 510, 300 )
@@ -320,3 +353,4 @@ script = ExtResource( 6 )
 
 [connection signal="input_event" from="BallSpawnArea" to="." method="_on_BallSpawnArea_input_event"]
 [connection signal="body_exited" from="DespawnArea" to="." method="_on_DespawnArea_body_exited"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]

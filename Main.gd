@@ -39,3 +39,7 @@ func _on_BallSpawnArea_input_event(viewport, event, shape_idx):
 		newBall = ball.instance();
 		newBall.position = event.position;
 		add_child(newBall);
+
+
+func _on_RestartButton_pressed():
+	get_tree().reload_current_scene();
