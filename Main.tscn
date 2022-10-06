@@ -343,6 +343,16 @@ size_flags_vertical = 4
 disabled = true
 text = "Next"
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
+margin_right = 1024.0
+margin_bottom = 60.0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer2"]
+margin_top = 23.0
+margin_right = 69.0
+margin_bottom = 37.0
+text = "Points: 0/0"
+
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
 position = Vector2( 510, 300 )
@@ -354,3 +364,4 @@ script = ExtResource( 6 )
 [connection signal="input_event" from="BallSpawnArea" to="." method="_on_BallSpawnArea_input_event"]
 [connection signal="body_exited" from="DespawnArea" to="." method="_on_DespawnArea_body_exited"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/NextButton" to="." method="_on_NextButton_pressed"]

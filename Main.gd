@@ -5,11 +5,15 @@ var clickPos = null;
 var releasePos = null;
 var ball = preload("res://Ball.tscn")
 var newBall;
+var points = 0;
+var winPoints = 100;
 
+const Cube = preload("res://Cube.gd");
+onready var cube = Cube.new();
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$CanvasLayer/HBoxContainer2/Label.text = "Points: 0/" + str(winPoints);
 	
 	
 func _unhandled_input(event):
@@ -27,7 +31,19 @@ func _unhandled_input(event):
 
 
 func _on_DespawnArea_body_exited(body):
+	if(body.is_in_group("blocks")):
+		var tempPoints = body.scaleX * body.scaleY;
+		if(body.type == Cube.CubeType.GREEN):
+			points += tempPoints;
+		elif(body.type == Cube.CubeType.RED):
+			points -= tempPoints;
+		else: #white block
+			pass;
 	body.queue_free();
+	$CanvasLayer/HBoxContainer2/Label.text = "Points: " + str(points) + "/" + str(winPoints);
+	if(points >= winPoints):
+		$CanvasLayer/HBoxContainer/NextButton.disabled = false;
+	
 
 
 func _on_BallSpawnArea_input_event(viewport, event, shape_idx):
@@ -42,4 +58,8 @@ func _on_BallSpawnArea_input_event(viewport, event, shape_idx):
 
 
 func _on_RestartButton_pressed():
+	get_tree().reload_current_scene();
+
+
+func _on_NextButton_pressed():
 	get_tree().reload_current_scene();
