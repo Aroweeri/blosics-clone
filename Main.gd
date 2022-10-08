@@ -28,6 +28,9 @@ func _unhandled_input(event):
 				
 				newBall.apply_central_impulse(shootVector);
 				clickPos = null;
+				
+				points -= round(newBall.mass);
+				$CanvasLayer/HBoxContainer2/Label.text = "Points: " + str(points) + "/" + str(winPoints);
 
 
 func _on_DespawnArea_body_exited(body):
