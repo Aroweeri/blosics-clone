@@ -1,12 +1,14 @@
 extends Node2D
 
+export var winPoints = 0;
+export var pointsMultiplier : float = 1;
+
 var pressed = false;
 var clickPos = null;
 var releasePos = null;
 var ball = preload("res://Ball.tscn")
 var newBall;
 var points = 0;
-var winPoints = 100;
 
 const Cube = preload("res://Cube.gd");
 onready var cube = Cube.new();
@@ -14,7 +16,6 @@ onready var cube = Cube.new();
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CanvasLayer/HBoxContainer2/PointsLabel.text = "Points: 0/" + str(winPoints);
-	
 	
 func _unhandled_input(event):
 	if(event is InputEventMouseButton):
@@ -35,7 +36,7 @@ func _unhandled_input(event):
 
 func _on_DespawnArea_body_exited(body):
 	if(body.is_in_group("blocks")):
-		var tempPoints = body.scaleX * body.scaleY;
+		var tempPoints = body.scaleX * body.scaleY * pointsMultiplier;
 		if(body.type == Cube.CubeType.GREEN):
 			points += tempPoints;
 		elif(body.type == Cube.CubeType.RED):

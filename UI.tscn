@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Black.tres" type="Theme" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 540.0
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="MenuButton" type="Button" parent="HBoxContainer"]
+margin_top = 20.0
+margin_right = 48.0
+margin_bottom = 40.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+disabled = true
+text = "Menu"
+
+[node name="RestartButton" type="Button" parent="HBoxContainer"]
+margin_left = 483.0
+margin_top = 20.0
+margin_right = 540.0
+margin_bottom = 40.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Restart"
+
+[node name="NextButton" type="Button" parent="HBoxContainer"]
+margin_left = 982.0
+margin_top = 20.0
+margin_right = 1024.0
+margin_bottom = 40.0
+size_flags_horizontal = 10
+size_flags_vertical = 4
+disabled = true
+text = "Next"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 60.0
+
+[node name="LevelLabel" type="Label" parent="HBoxContainer2"]
+margin_top = 23.0
+margin_right = 951.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "Level: 1/10"
+
+[node name="PointsLabel" type="Label" parent="HBoxContainer2"]
+margin_left = 955.0
+margin_top = 23.0
+margin_right = 1024.0
+margin_bottom = 37.0
+theme = ExtResource( 1 )
+text = "Points: 0/0"
