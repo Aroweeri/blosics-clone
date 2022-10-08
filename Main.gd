@@ -13,7 +13,7 @@ onready var cube = Cube.new();
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CanvasLayer/HBoxContainer2/Label.text = "Points: 0/" + str(winPoints);
+	$CanvasLayer/HBoxContainer2/PointsLabel.text = "Points: 0/" + str(winPoints);
 	
 	
 func _unhandled_input(event):
@@ -30,7 +30,7 @@ func _unhandled_input(event):
 				clickPos = null;
 				
 				points -= round(newBall.mass);
-				$CanvasLayer/HBoxContainer2/Label.text = "Points: " + str(points) + "/" + str(winPoints);
+				$CanvasLayer/HBoxContainer2/PointsLabel.text = "Points: " + str(points) + "/" + str(winPoints);
 
 
 func _on_DespawnArea_body_exited(body):
@@ -43,9 +43,11 @@ func _on_DespawnArea_body_exited(body):
 		else: #white block
 			pass;
 	body.queue_free();
-	$CanvasLayer/HBoxContainer2/Label.text = "Points: " + str(points) + "/" + str(winPoints);
+	$CanvasLayer/HBoxContainer2/PointsLabel.text = "Points: " + str(points) + "/" + str(winPoints);
 	if(points >= winPoints):
 		$CanvasLayer/HBoxContainer/NextButton.disabled = false;
+	else:
+		$CanvasLayer/HBoxContainer/NextButton.disabled = true;
 	
 
 
