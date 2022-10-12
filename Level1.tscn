@@ -17,12 +17,12 @@ script = ExtResource( 8 )
 winPoints = 100
 
 [node name="Platform" parent="." instance=ExtResource( 5 )]
-position = Vector2( 370, 490 )
+position = Vector2( 300, 300 )
 scaleX = 20.0
 scaleY = 2.0
 
 [node name="Wall" type="Node2D" parent="."]
-position = Vector2( 352, 480 )
+position = Vector2( 280, 290 )
 
 [node name="Cube16" parent="Wall" instance=ExtResource( 3 )]
 position = Vector2( 18, -10 )
@@ -298,9 +298,9 @@ position = Vector2( -67, -110 )
 scaleY = 2.0
 
 [node name="BallSpawnArea" parent="." instance=ExtResource( 6 )]
-position = Vector2( 645, 390 )
-scaleX = 0.5
-scaleY = 0.5
+position = Vector2( 600, 200 )
+scaleX = 0.7
+scaleY = 0.7
 
 [node name="DespawnArea" type="Area2D" parent="."]
 visible = false
@@ -314,7 +314,7 @@ shape = SubResource( 6 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 margin_top = 540.0
-margin_right = 1024.0
+margin_right = 800.0
 margin_bottom = 600.0
 
 [node name="MenuButton" type="Button" parent="CanvasLayer/HBoxContainer"]
@@ -327,18 +327,18 @@ disabled = true
 text = "Menu"
 
 [node name="RestartButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 483.0
+margin_left = 371.0
 margin_top = 20.0
-margin_right = 540.0
+margin_right = 428.0
 margin_bottom = 40.0
 size_flags_horizontal = 6
 size_flags_vertical = 4
 text = "Restart"
 
 [node name="NextButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 982.0
+margin_left = 758.0
 margin_top = 20.0
-margin_right = 1024.0
+margin_right = 800.0
 margin_bottom = 40.0
 size_flags_horizontal = 10
 size_flags_vertical = 4
@@ -346,21 +346,21 @@ disabled = true
 text = "Next"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
-margin_right = 1024.0
+margin_right = 800.0
 margin_bottom = 60.0
 
 [node name="LevelLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
 margin_top = 23.0
-margin_right = 951.0
+margin_right = 727.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
 theme = ExtResource( 7 )
 text = "Level: 1/10"
 
 [node name="PointsLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
-margin_left = 955.0
+margin_left = 731.0
 margin_top = 23.0
-margin_right = 1024.0
+margin_right = 800.0
 margin_bottom = 37.0
 theme = ExtResource( 7 )
 text = "Points: 0/0"
