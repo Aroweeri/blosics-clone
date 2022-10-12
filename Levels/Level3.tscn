@@ -1,0 +1,277 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprite.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Black.tres" type="Theme" id=2]
+[ext_resource path="res://DespawnArea.gd" type="Script" id=3]
+[ext_resource path="res://Resources/background.jpg" type="Texture" id=4]
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Level.gd" type="Script" id=6]
+[ext_resource path="res://Cube.tscn" type="PackedScene" id=7]
+[ext_resource path="res://BallSpawnArea.tscn" type="PackedScene" id=8]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 712.0
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 6 )
+winPoints = 100
+
+[node name="Platform" parent="." instance=ExtResource( 5 )]
+position = Vector2( 130, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Platform2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 210, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Platform3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 290, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Platform4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 370, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Platform5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 450, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Platform6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 530, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Platform7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 610, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Platform8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 690, 300 )
+scaleX = 2.0
+scaleY = 2.0
+
+[node name="Wall" type="Node2D" parent="."]
+position = Vector2( 355, 405 )
+
+[node name="Cube" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -185, -120 )
+scaleX = 7.0
+
+[node name="Cube2" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -105, -120 )
+scaleX = 7.0
+
+[node name="Cube3" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -25, -120 )
+scaleX = 7.0
+
+[node name="Cube4" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 55, -120 )
+scaleX = 7.0
+
+[node name="Cube5" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 135, -120 )
+scaleX = 7.0
+
+[node name="Cube6" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 215, -120 )
+scaleX = 7.0
+
+[node name="Cube14" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -105, -190 )
+scaleX = 8.0
+
+[node name="Cube15" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -25, -190 )
+scaleX = 8.0
+
+[node name="Cube16" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 55, -190 )
+scaleX = 8.0
+
+[node name="Cube17" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 135, -190 )
+scaleX = 8.0
+
+[node name="Cube18" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 215, -190 )
+scaleX = 8.0
+
+[node name="Cube24" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -65, -270 )
+scaleX = 8.0
+
+[node name="Cube25" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 15, -270 )
+scaleX = 8.0
+
+[node name="Cube26" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 95, -270 )
+scaleX = 8.0
+
+[node name="Cube32" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -25, -350 )
+scaleX = 8.0
+
+[node name="Cube33" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 55, -350 )
+scaleX = 8.0
+
+[node name="Cube34" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 135, -350 )
+scaleX = 8.0
+
+[node name="Cube27" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 175, -270 )
+scaleX = 8.0
+
+[node name="Cube7" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 295, -120 )
+scaleX = 7.0
+
+[node name="Cube8" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -145, -150 )
+scaleY = 7.0
+
+[node name="Cube9" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -65, -150 )
+scaleY = 7.0
+
+[node name="Cube10" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 16, -150 )
+scaleY = 7.0
+
+[node name="Cube11" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 95, -150 )
+scaleY = 7.0
+
+[node name="Cube12" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 175, -150 )
+scaleY = 7.0
+
+[node name="Cube19" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -105, -230 )
+scaleY = 7.0
+
+[node name="Cube20" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -25, -230 )
+scaleY = 7.0
+
+[node name="Cube21" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 56, -230 )
+scaleY = 7.0
+
+[node name="Cube22" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 135, -230 )
+scaleY = 7.0
+
+[node name="Cube28" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( -65, -310 )
+scaleY = 7.0
+
+[node name="Cube29" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 15, -310 )
+scaleY = 7.0
+
+[node name="Cube30" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 96, -310 )
+scaleY = 7.0
+
+[node name="Cube31" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 175, -310 )
+scaleY = 7.0
+
+[node name="Cube23" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 215, -230 )
+scaleY = 7.0
+
+[node name="Cube13" parent="Wall" instance=ExtResource( 7 )]
+position = Vector2( 255, -150 )
+scaleY = 7.0
+
+[node name="BallSpawnArea" parent="." instance=ExtResource( 8 )]
+position = Vector2( 400, 500 )
+scaleX = 0.7
+scaleY = 0.7
+
+[node name="DespawnArea" type="Area2D" parent="."]
+visible = false
+position = Vector2( 520, 320 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DespawnArea"]
+shape = SubResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+margin_top = 540.0
+margin_right = 800.0
+margin_bottom = 600.0
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_top = 20.0
+margin_right = 48.0
+margin_bottom = 40.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+disabled = true
+text = "Menu"
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_left = 371.0
+margin_top = 20.0
+margin_right = 428.0
+margin_bottom = 40.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Restart"
+
+[node name="NextButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_left = 758.0
+margin_top = 20.0
+margin_right = 800.0
+margin_bottom = 40.0
+size_flags_horizontal = 10
+size_flags_vertical = 4
+disabled = true
+text = "Next"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
+margin_right = 800.0
+margin_bottom = 60.0
+
+[node name="LevelLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
+margin_top = 23.0
+margin_right = 727.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "Level: 1/10"
+
+[node name="PointsLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
+margin_left = 731.0
+margin_top = 23.0
+margin_right = 800.0
+margin_bottom = 37.0
+theme = ExtResource( 2 )
+text = "Points: 0/0"
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 510, 300 )
+scale = Vector2( 0.541667, 0.574074 )
+z_index = -2
+texture = ExtResource( 4 )
+script = ExtResource( 1 )
+
+[connection signal="input_event" from="BallSpawnArea" to="." method="_on_BallSpawnArea_input_event"]
+[connection signal="body_exited" from="DespawnArea" to="." method="_on_DespawnArea_body_exited"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/NextButton" to="." method="_on_NextButton_pressed"]
