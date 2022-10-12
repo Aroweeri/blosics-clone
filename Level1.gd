@@ -2,6 +2,7 @@ extends Node2D
 
 export var winPoints = 0;
 export var pointsMultiplier : float = 1;
+export var blockScale = 1;
 
 var pressed = false;
 var clickPos = null;
