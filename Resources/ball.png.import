@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform.png-984404150e7e767b8067601eb44eb6b5.stex"
+path="res://.import/ball.png-0c3280ad08e14f6566aaeef4d0612e1c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://platform.png"
-dest_files=[ "res://.import/platform.png-984404150e7e767b8067601eb44eb6b5.stex" ]
+source_file="res://Resources/ball.png"
+dest_files=[ "res://.import/ball.png-0c3280ad08e14f6566aaeef4d0612e1c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

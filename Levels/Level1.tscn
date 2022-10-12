@@ -1,22 +1,22 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprite.gd" type="Script" id=1]
-[ext_resource path="res://DespawnArea.gd" type="Script" id=2]
-[ext_resource path="res://Cube.tscn" type="PackedScene" id=3]
-[ext_resource path="res://background.jpg" type="Texture" id=4]
-[ext_resource path="res://Platform.tscn" type="PackedScene" id=5]
-[ext_resource path="res://BallSpawnArea.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Black.tres" type="Theme" id=7]
-[ext_resource path="res://Level1.gd" type="Script" id=8]
+[ext_resource path="res://Resources/Black.tres" type="Theme" id=2]
+[ext_resource path="res://DespawnArea.gd" type="Script" id=3]
+[ext_resource path="res://Resources/background.jpg" type="Texture" id=4]
+[ext_resource path="res://BallSpawnArea.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Level.gd" type="Script" id=6]
+[ext_resource path="res://Cube.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CircleShape2D" id=6]
 radius = 712.0
 
 [node name="Level1" type="Node2D"]
-script = ExtResource( 8 )
+script = ExtResource( 6 )
 winPoints = 100
 
-[node name="Platform" parent="." instance=ExtResource( 5 )]
+[node name="Platform" parent="." instance=ExtResource( 8 )]
 position = Vector2( 300, 300 )
 scaleX = 20.0
 scaleY = 2.0
@@ -24,280 +24,280 @@ scaleY = 2.0
 [node name="Wall" type="Node2D" parent="."]
 position = Vector2( 280, 290 )
 
-[node name="Cube16" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube16" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 18, -10 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube17" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube17" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -2, -10 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube18" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube18" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -22, -10 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube19" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube19" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -42, -10 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube20" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube20" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -62, -10 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube23" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube23" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 68, -30 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube24" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube24" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 48, -30 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube25" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube25" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 28, -30 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube26" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube26" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 8, -30 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube27" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube27" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -12, -30 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube28" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube28" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -32, -30 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube29" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube29" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -52, -30 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube21" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube21" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 38, -10 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube22" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube22" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 58, -10 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube32" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube32" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 73, -10 )
 scaleY = 2.0
 
-[node name="Cube33" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube33" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -67, -30 )
 scaleY = 2.0
 
-[node name="Cube30" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube30" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 18, -50 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube31" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube31" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -2, -50 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube34" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube34" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -22, -50 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube35" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube35" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -42, -50 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube36" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube36" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -62, -50 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube37" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube37" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 68, -70 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube38" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube38" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 48, -70 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube39" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube39" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 28, -70 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube40" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube40" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 8, -70 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube41" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube41" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -12, -70 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube42" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube42" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -32, -70 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube43" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube43" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -52, -70 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube44" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube44" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 38, -50 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube45" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube45" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 58, -50 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube46" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube46" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 73, -50 )
 scaleY = 2.0
 
-[node name="Cube47" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube47" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -67, -70 )
 scaleY = 2.0
 
-[node name="Cube48" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube48" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 18, -90 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube49" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube49" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -2, -90 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube50" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube50" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -22, -90 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube51" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube51" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -42, -90 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube52" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube52" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -62, -90 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube53" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube53" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 68, -110 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube54" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube54" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 48, -110 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube55" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube55" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 28, -110 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube56" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube56" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 8, -110 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube57" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube57" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -12, -110 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube58" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube58" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -32, -110 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube59" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube59" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -52, -110 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube60" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube60" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 38, -90 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube61" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube61" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 58, -90 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube62" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube62" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 73, -90 )
 scaleY = 2.0
 
-[node name="Cube64" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube64" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 18, -130 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube65" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube65" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -2, -130 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube66" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube66" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -22, -130 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube67" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube67" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -42, -130 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube68" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube68" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -62, -130 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube69" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube69" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 38, -130 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube70" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube70" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 58, -130 )
 scaleX = 2.0
 scaleY = 2.0
 
-[node name="Cube71" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube71" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( 73, -130 )
 scaleY = 2.0
 
-[node name="Cube63" parent="Wall" instance=ExtResource( 3 )]
+[node name="Cube63" parent="Wall" instance=ExtResource( 7 )]
 position = Vector2( -67, -110 )
 scaleY = 2.0
 
-[node name="BallSpawnArea" parent="." instance=ExtResource( 6 )]
+[node name="BallSpawnArea" parent="." instance=ExtResource( 5 )]
 position = Vector2( 600, 200 )
 scaleX = 0.7
 scaleY = 0.7
@@ -305,7 +305,7 @@ scaleY = 0.7
 [node name="DespawnArea" type="Area2D" parent="."]
 visible = false
 position = Vector2( 520, 320 )
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DespawnArea"]
 shape = SubResource( 6 )
@@ -354,7 +354,7 @@ margin_top = 23.0
 margin_right = 727.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
-theme = ExtResource( 7 )
+theme = ExtResource( 2 )
 text = "Level: 1/10"
 
 [node name="PointsLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
@@ -362,7 +362,7 @@ margin_left = 731.0
 margin_top = 23.0
 margin_right = 800.0
 margin_bottom = 37.0
-theme = ExtResource( 7 )
+theme = ExtResource( 2 )
 text = "Points: 0/0"
 
 [node name="Sprite" type="Sprite" parent="."]
