@@ -23,7 +23,14 @@ func _unhandled_input(event):
 		if(event.button_index == BUTTON_LEFT and not event.pressed):
 			releasePos = event.position;
 			if(clickPos):
+				
+				#ball's size is locked when the player releases it.
 				newBall.growing = false;
+				
+				#Ball becomes physics enabled upon being released.
+				newBall.set_collision_mask(1);
+				newBall.set_collision_layer(1);
+				
 				var shootVector : Vector2 = clickPos - releasePos;
 				shootVector = shootVector.clamped(300);
 				shootVector *= newBall.mass * 20;
@@ -31,7 +38,7 @@ func _unhandled_input(event):
 				newBall.apply_central_impulse(shootVector);
 				clickPos = null;
 				
-				points -= round(newBall.mass);
+				points -= round(newBall.mass*2);
 				$CanvasLayer/HBoxContainer2/PointsLabel.text = "Points: " + str(points) + "/" + str(winPoints);
 
 
