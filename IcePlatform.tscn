@@ -4,12 +4,12 @@
 [ext_resource path="res://Platform.gd" type="Script" id=2]
 
 [sub_resource type="PhysicsMaterial" id=4]
-bounce = 0.6
+friction = 0.05
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 5 )
 
-[node name="Bouncer" type="StaticBody2D"]
+[node name="IcePlatform" type="StaticBody2D"]
 physics_material_override = SubResource( 4 )
 script = ExtResource( 2 )
 
@@ -17,5 +17,6 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="CollisionShape2D"]
-modulate = Color( 0.109804, 0.109804, 0.109804, 1 )
+modulate = Color( 0.839216, 0.839216, 0.839216, 1 )
+self_modulate = Color( 0, 0.976562, 1, 1 )
 texture = ExtResource( 1 )
