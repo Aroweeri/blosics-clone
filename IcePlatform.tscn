@@ -4,7 +4,7 @@
 [ext_resource path="res://Platform.gd" type="Script" id=2]
 
 [sub_resource type="PhysicsMaterial" id=4]
-friction = 0.05
+friction = 0.03
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 5 )
