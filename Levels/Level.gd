@@ -49,8 +49,6 @@ func _on_DespawnArea_body_exited(body):
 			points += tempPoints;
 		elif(body.type == Cube.CubeType.RED):
 			points -= tempPoints;
-		else: #white block
-			pass;
 	body.queue_free();
 	$CanvasLayer/HBoxContainer2/PointsLabel.text = "Points: " + str(points) + "/" + str(winPoints);
 	if(points >= winPoints):

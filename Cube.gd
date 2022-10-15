@@ -3,7 +3,6 @@ extends RigidBody2D
 enum CubeType {
 	GREEN,
 	RED,
-	WHITE
 }
 
 export var scaleX = 1.0;
@@ -16,8 +15,6 @@ func _ready():
 	$CollisionShape2D.scale.y = scaleY;
 	
 	if(type == CubeType.GREEN):
-		$CollisionShape2D/Sprite.modulate = Color(0,1,0,0.8);
+		$CollisionShape2D/Sprite.texture = load("res://Resources/cube_green.png");
 	elif(type == CubeType.RED):
-		$CollisionShape2D/Sprite.modulate = Color(1,0,0,0.8);
-	elif(type == CubeType.WHITE):
-		$CollisionShape2D/Sprite.modulate = Color(1,1,1,1);
+		$CollisionShape2D/Sprite.texture = load("res://Resources/cube_red.png");
