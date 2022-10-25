@@ -1,4 +1,13 @@
-[gd_resource type="Theme" format=2]
+[gd_resource type="Theme" load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Fredoka_One/FredokaOne-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
 
 [resource]
-Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/fonts/font = SubResource( 1 )
