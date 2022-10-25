@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Sprite.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Black.tres" type="Theme" id=2]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://DespawnArea.gd" type="Script" id=3]
 [ext_resource path="res://Resources/background.jpg" type="Texture" id=4]
 [ext_resource path="res://Platform.tscn" type="PackedScene" id=5]
@@ -730,61 +730,6 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DespawnArea"]
 shape = SubResource( 6 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-margin_top = 540.0
-margin_right = 800.0
-margin_bottom = 600.0
-
-[node name="MenuButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_top = 20.0
-margin_right = 48.0
-margin_bottom = 40.0
-size_flags_horizontal = 2
-size_flags_vertical = 4
-disabled = true
-text = "Menu"
-
-[node name="RestartButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 371.0
-margin_top = 20.0
-margin_right = 428.0
-margin_bottom = 40.0
-size_flags_horizontal = 6
-size_flags_vertical = 4
-text = "Restart"
-
-[node name="NextButton" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 758.0
-margin_top = 20.0
-margin_right = 800.0
-margin_bottom = 40.0
-size_flags_horizontal = 10
-size_flags_vertical = 4
-disabled = true
-text = "Next"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
-margin_right = 800.0
-margin_bottom = 60.0
-
-[node name="LevelLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
-margin_top = 23.0
-margin_right = 727.0
-margin_bottom = 37.0
-size_flags_horizontal = 3
-theme = ExtResource( 2 )
-text = "Level: 1/10"
-
-[node name="PointsLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
-margin_left = 731.0
-margin_top = 23.0
-margin_right = 800.0
-margin_bottom = 37.0
-theme = ExtResource( 2 )
-text = "Points: 0/0"
-
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
 position = Vector2( 510, 300 )
@@ -815,7 +760,7 @@ position = Vector2( 500, 550 )
 scaleX = 19.0
 scaleY = 2.0
 
+[node name="UI" parent="." instance=ExtResource( 2 )]
+
 [connection signal="input_event" from="BallSpawnArea" to="." method="_on_BallSpawnArea_input_event"]
 [connection signal="body_exited" from="DespawnArea" to="." method="_on_DespawnArea_body_exited"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/NextButton" to="." method="_on_NextButton_pressed"]
