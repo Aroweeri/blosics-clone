@@ -53,8 +53,10 @@ func _on_DespawnArea_body_exited(body):
 	$UI/HBoxContainer2/PointsLabel.text = "POINTS: " + str(points) + "/" + str(winPoints);
 	if(points >= winPoints):
 		$UI/HBoxContainer/NextButton.disabled = false;
+		$UI/HBoxContainer/NextButton.text = "NEXT >>";
 	else:
 		$UI/HBoxContainer/NextButton.disabled = true;
+		$UI/HBoxContainer/NextButton.text = "";
 	
 
 
