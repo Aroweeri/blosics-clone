@@ -1,5 +1,7 @@
 extends Node2D
 
+var util = load("res://Util.gd").new();
+
 export var winPoints = 0;
 export var pointsMultiplier : float = 1;
 export var blockScale = 1;
@@ -8,6 +10,8 @@ export var blockScale = 1;
 #This is used to unlock the next level after winning.
 export var levelID = 0;
 
+var levelPaths = ["Level1.tscn", "Level2.tscn", "Level3.tscn", "Level4.tscn", "Level5.tscn", 
+				  "Level6.tscn", "Level7.tscn", "Level8.tscn", "Level9.tscn", "Level10.tscn"];
 var pressed = false;
 var clickPos = null;
 var releasePos = null;
@@ -81,9 +85,18 @@ func _on_BallSpawnArea_input_event(viewport, event, shape_idx):
 func _on_RestartButton_pressed():
 	get_tree().reload_current_scene();
 
-
 func _on_NextButton_pressed():
-	get_tree().reload_current_scene();
+	
+	#update unlocked levels
+	if(levelID < 10):
+		var data = util.load_data("res://data.json");
+		data["levels"][str(levelID+1)]["unlocked"] = true;
+		util.save_data(data, "res://data.json");
+	
+	if(levelID < 10):
+		get_tree().change_scene("res://Levels/" + levelPaths[levelID]);
+	else:
+		get_tree().change_scene("res://Levels/" + levelPaths[0]);
 	
 func _on_MenuButton_pressed():
 	get_tree().reload_current_scene();

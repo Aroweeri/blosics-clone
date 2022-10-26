@@ -1,0 +1,34 @@
+{
+	"levels": {
+		"1": {
+			"unlocked": true
+		},
+		"2": {
+			"unlocked": false
+		},
+		"3": {
+			"unlocked": false
+		},
+		"4": {
+			"unlocked": false
+		},
+		"5": {
+			"unlocked": false
+		},
+		"6": {
+			"unlocked": false
+		},
+		"7": {
+			"unlocked": false
+		},
+		"8": {
+			"unlocked": false
+		},
+		"9": {
+			"unlocked": false
+		},
+		"10": {
+			"unlocked": false
+		}
+	}
+}
