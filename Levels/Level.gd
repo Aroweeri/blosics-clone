@@ -4,6 +4,10 @@ export var winPoints = 0;
 export var pointsMultiplier : float = 1;
 export var blockScale = 1;
 
+#Set this in the editor to the level number. i.e. Level1 = 1
+#This is used to unlock the next level after winning.
+export var levelID = 0;
+
 var pressed = false;
 var clickPos = null;
 var releasePos = null;
