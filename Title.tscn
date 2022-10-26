@@ -1,0 +1,204 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://level_screenshots/1.png" type="Texture" id=1]
+[ext_resource path="res://level_screenshots/8.png" type="Texture" id=2]
+[ext_resource path="res://level_screenshots/10.png" type="Texture" id=3]
+[ext_resource path="res://level_screenshots/9.png" type="Texture" id=4]
+[ext_resource path="res://level_screenshots/3.png" type="Texture" id=5]
+[ext_resource path="res://level_screenshots/4.png" type="Texture" id=6]
+[ext_resource path="res://level_screenshots/6.png" type="Texture" id=7]
+[ext_resource path="res://level_screenshots/2.png" type="Texture" id=8]
+[ext_resource path="res://level_screenshots/5.png" type="Texture" id=9]
+[ext_resource path="res://level_screenshots/7.png" type="Texture" id=10]
+[ext_resource path="res://image_button.tres" type="Theme" id=11]
+[ext_resource path="res://TitleButton.gd" type="Script" id=12]
+[ext_resource path="res://Levels/Level1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Levels/Level2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Title.gd" type="Script" id=15]
+[ext_resource path="res://Levels/Level3.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Levels/Level8.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Levels/Level6.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Levels/Level10.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Levels/Level7.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Levels/Level5.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Levels/Level4.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Levels/Level9.tscn" type="PackedScene" id=23]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 15 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 800.0
+margin_bottom = 250.0
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 800.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 377.0
+margin_right = 423.0
+margin_bottom = 14.0
+text = "Blosics"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 800.0
+margin_bottom = 250.0
+size_flags_vertical = 3
+columns = 5
+
+[node name="Button" type="Button" parent="VBoxContainer/GridContainer"]
+margin_right = 156.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 13 )
+
+[node name="Button2" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 160.0
+margin_right = 316.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 8 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 14 )
+
+[node name="Button3" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 320.0
+margin_right = 476.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 5 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 16 )
+
+[node name="Button4" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 480.0
+margin_right = 636.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 6 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 22 )
+
+[node name="Button5" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 640.0
+margin_right = 796.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 9 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 21 )
+
+[node name="Button6" type="Button" parent="VBoxContainer/GridContainer"]
+margin_top = 118.0
+margin_right = 156.0
+margin_bottom = 232.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 7 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 18 )
+
+[node name="Button7" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 160.0
+margin_top = 118.0
+margin_right = 316.0
+margin_bottom = 232.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 10 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 20 )
+
+[node name="Button8" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 320.0
+margin_top = 118.0
+margin_right = 476.0
+margin_bottom = 232.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 2 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 17 )
+
+[node name="Button9" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 480.0
+margin_top = 118.0
+margin_right = 636.0
+margin_bottom = 232.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 4 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 23 )
+
+[node name="Button10" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 640.0
+margin_top = 118.0
+margin_right = 796.0
+margin_bottom = 232.0
+rect_pivot_offset = Vector2( -505, -170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 11 )
+disabled = true
+icon = ExtResource( 3 )
+expand_icon = true
+script = ExtResource( 12 )
+targetScene = ExtResource( 19 )
+
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button" to="VBoxContainer/GridContainer/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button2" to="VBoxContainer/GridContainer/Button2" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button3" to="VBoxContainer/GridContainer/Button3" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button4" to="VBoxContainer/GridContainer/Button4" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button5" to="VBoxContainer/GridContainer/Button5" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button6" to="VBoxContainer/GridContainer/Button6" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button7" to="VBoxContainer/GridContainer/Button7" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button8" to="VBoxContainer/GridContainer/Button8" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button9" to="VBoxContainer/GridContainer/Button9" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button10" to="VBoxContainer/GridContainer/Button10" method="_on_Button_pressed"]

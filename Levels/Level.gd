@@ -100,4 +100,4 @@ func _on_NextButton_pressed():
 		get_tree().change_scene("res://Levels/" + levelPaths[0]);
 	
 func _on_MenuButton_pressed():
-	get_tree().reload_current_scene();
+	get_tree().change_scene("res://Title.tscn");
