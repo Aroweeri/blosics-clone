@@ -25,6 +25,7 @@ onready var cube = Cube.new();
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$UI/HBoxContainer2/PointsLabel.text = "POINTS: 0/" + str(winPoints);
+	$UI/HBoxContainer2/LevelLabel.text = "LEVEL: " + str(levelID) + "/10";
 	$UI/HBoxContainer/MenuButton.connect("pressed", self, "_on_MenuButton_pressed");
 	$UI/HBoxContainer/RestartButton.connect("pressed", self, "_on_RestartButton_pressed");
 	$UI/HBoxContainer/NextButton.connect("pressed", self, "_on_NextButton_pressed");
