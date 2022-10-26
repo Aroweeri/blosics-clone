@@ -17,6 +17,9 @@ onready var cube = Cube.new();
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$UI/HBoxContainer2/PointsLabel.text = "POINTS: 0/" + str(winPoints);
+	$UI/HBoxContainer/MenuButton.connect("pressed", self, "_on_MenuButton_pressed");
+	$UI/HBoxContainer/RestartButton.connect("pressed", self, "_on_RestartButton_pressed");
+	$UI/HBoxContainer/NextButton.connect("pressed", self, "_on_NextButton_pressed");
 	
 func _unhandled_input(event):
 	if(event is InputEventMouseButton):
@@ -76,4 +79,7 @@ func _on_RestartButton_pressed():
 
 
 func _on_NextButton_pressed():
+	get_tree().reload_current_scene();
+	
+func _on_MenuButton_pressed():
 	get_tree().reload_current_scene();
