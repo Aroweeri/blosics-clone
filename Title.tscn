@@ -23,7 +23,7 @@
 [ext_resource path="res://Levels/Level5.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Levels/Level4.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Levels/Level9.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Resources/Black.tres" type="Theme" id=24]
+[ext_resource path="res://Resources/BlosicsTheme.tres" type="Theme" id=24]
 [ext_resource path="res://Resources/background.jpg" type="Texture" id=25]
 
 [node name="Control" type="Control"]

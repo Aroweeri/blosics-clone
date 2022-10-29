@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Resources/Black.tres" type="Theme" id=1]
+[ext_resource path="res://Resources/BlosicsTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Resources/Red.tres" type="Theme" id=2]
 
 [node name="UI" type="CanvasLayer"]
