@@ -24,7 +24,7 @@
 [ext_resource path="res://Levels/Level9.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Resources/BlosicsTheme.tres" type="Theme" id=24]
 [ext_resource path="res://Resources/background.jpg" type="Texture" id=25]
-[ext_resource path="res://BlosicsFont.tres" type="DynamicFont" id=26]
+[ext_resource path="res://Resources/BlosicsFont.tres" type="DynamicFont" id=26]
 [ext_resource path="res://Resources/Fredoka_One/FredokaOne-Regular.ttf" type="DynamicFontData" id=27]
 
 [sub_resource type="StyleBoxEmpty" id=2]
