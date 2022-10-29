@@ -10,7 +10,6 @@
 [ext_resource path="res://level_screenshots/2.png" type="Texture" id=8]
 [ext_resource path="res://level_screenshots/5.png" type="Texture" id=9]
 [ext_resource path="res://level_screenshots/7.png" type="Texture" id=10]
-[ext_resource path="res://image_button.tres" type="Theme" id=11]
 [ext_resource path="res://TitleButton.gd" type="Script" id=12]
 [ext_resource path="res://Levels/Level1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Levels/Level2.tscn" type="PackedScene" id=14]
@@ -39,7 +38,7 @@
 [sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="DynamicFont" id=9]
-size = 60
+size = 80
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 27 )
@@ -68,6 +67,8 @@ RedButton/colors/font_color = Color( 1, 0, 0, 1 )
 RedButton/colors/font_color_hover = Color( 1, 1, 1, 1 )
 RedButton/fonts/font = SubResource( 8 )
 
+[sub_resource type="Theme" id=11]
+
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -79,19 +80,19 @@ margin_bottom = 250.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_right = 800.0
-margin_bottom = 74.0
+margin_bottom = 97.0
 
 [node name="Title" type="Label" parent="VBoxContainer/CenterContainer"]
-margin_left = 300.0
-margin_right = 499.0
-margin_bottom = 74.0
+margin_left = 267.0
+margin_right = 532.0
+margin_bottom = 97.0
 theme = SubResource( 10 )
 text = "Blosics"
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
-margin_top = 78.0
+margin_top = 101.0
 margin_right = 800.0
-margin_bottom = 358.0
+margin_bottom = 381.0
 rect_min_size = Vector2( 0, 280 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
@@ -120,7 +121,6 @@ margin_bottom = 117.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
 icon = ExtResource( 1 )
 expand_icon = true
 script = ExtResource( 12 )
@@ -133,7 +133,7 @@ margin_bottom = 117.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 8 )
 expand_icon = true
@@ -147,7 +147,7 @@ margin_bottom = 117.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 5 )
 expand_icon = true
@@ -161,7 +161,7 @@ margin_bottom = 117.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 6 )
 expand_icon = true
@@ -175,7 +175,7 @@ margin_bottom = 117.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 9 )
 expand_icon = true
@@ -189,7 +189,7 @@ margin_bottom = 237.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 7 )
 expand_icon = true
@@ -204,7 +204,7 @@ margin_bottom = 237.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 10 )
 expand_icon = true
@@ -219,7 +219,7 @@ margin_bottom = 237.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 2 )
 expand_icon = true
@@ -234,7 +234,7 @@ margin_bottom = 237.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 4 )
 expand_icon = true
@@ -249,7 +249,7 @@ margin_bottom = 237.0
 rect_pivot_offset = Vector2( -505, -170 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 11 )
+theme = SubResource( 11 )
 disabled = true
 icon = ExtResource( 3 )
 expand_icon = true
